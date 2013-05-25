@@ -1,0 +1,25 @@
+{
+  "name": "Skeleton for DevTools Extension ",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Skeleton for chrome developer panel extension",
+  "icons": { "16": "icon16.png",
+           "48": "icon48.png",
+          "128": "icon128.png" },
+"content_scripts": [
+    {
+	"matches": ["http://*/*","https://*/*"],
+      "js": ["content.js"]
+    }],
+"background": {
+	 "page": "background.html"
+},
+  "devtools_page": "devtools.html",
+  "options_page": "panel.html",
+  "permissions": [
+	"contextMenus",
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ]
+}
