@@ -1,6 +1,7 @@
 //sending console.log to content page so it can be desplayed in console
 console.log = function(data) {
-	message = {name : 'log' , data: data};
+	var args = Array.apply(null, arguments);
+	message = {name : 'log' , data: args};
 	chrome.tabs.getSelected(null, function(tab) {
 				chrome.tabs.sendMessage(tab.id, message, function(response) {});
 	});
