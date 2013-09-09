@@ -5,7 +5,6 @@
 
 //sending console.log to content page so it can be desplayed in console
 console.log = function() {
-	var args = Array.prototype.slice.call(arguments); 
 	var args = Array.apply(null, arguments);
 	port.postMessage({name : 'log' , data: args});
 };
