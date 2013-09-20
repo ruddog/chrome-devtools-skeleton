@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "manifest_version": 2,
   "description": "Skeleton for chrome developer panel extension",
-  "icons": { "16": "icon16.png",
-           "48": "icon48.png",
-          "128": "icon128.png" },
+  "icons": { "16": "/img/icon16.png",
+           "48": "/img/icon48.png",
+          "128": "/img/icon128.png" },
 "content_scripts": [
     {
 	"matches": ["http://*/*","https://*/*"],
